@@ -1,32 +1,39 @@
 const gameWrapper = document.getElementById("wrapper");  // selezioniamo il container
 let gameMode;
 let numberGrid;
+let column;
 
 const getGameMode = function () {
     gameMode = document.getElementById("difficulty").value;
     
     if (gameMode == "easy") {
-        numberGrid = 101;
+        numberGrid = 10;
     } else if (gameMode == "hard") {
-        numberGrid = 82;
+        numberGrid = 9;
     } else {
-        numberGrid = 50;
+        numberGrid = 7;
     }
-
+    console.log(numberGrid);
     return numberGrid;
-    // console.log(numberGrid);
+    
 }
 
 const getGrid = function (numberGrid) {
-  
-    for (let i = 1; i < numberGrid; i++) {
+    gameWrapper.innerHTML = "";
+
+    for (let i = 1; i <= Math.pow(numberGrid, 2); i++) {
         const squareWrapper = document.createElement("div");
         gameWrapper.append(squareWrapper);
         squareWrapper.classList.add("element");
+        squareWrapper.style = `width: calc(100% / ${numberGrid}`
         squareWrapper.append(i);
     }
 }
 
+const play = function() {
+    getGameMode();
+    getGrid(numberGrid);
+}
 
+document.getElementById("play").addEventListener("click", play);
 
-document.getElementById("play").addEventListener("click", getGameMode, getGrid(numberGrid));
