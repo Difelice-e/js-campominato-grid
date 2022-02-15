@@ -1,10 +1,9 @@
 const gameWrapper = document.getElementById("wrapper");  // selezioniamo il container
-let gameMode;
+
 let numberGrid;
-let column;
 
 const getGameMode = function () {
-    gameMode = document.getElementById("difficulty").value;
+    let gameMode = document.getElementById("difficulty").value;
     
     if (gameMode == "easy") {
         numberGrid = 10;
@@ -36,4 +35,6 @@ const play = function() {
 }
 
 document.getElementById("play").addEventListener("click", play);
+
+
 
