@@ -1,3 +1,9 @@
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 .container {
     max-width: 1024px;
     margin: 0 auto;
@@ -11,6 +17,16 @@ header .row {
 
 main {
     background-color: #7FFFD4;
-    min-height: 500px;
+    flex-grow: 1;
 }
 
+main .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
