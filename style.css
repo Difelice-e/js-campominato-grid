@@ -1,0 +1,16 @@
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+header .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+main {
+    background-color: #7FFFD4;
+    min-height: 500px;
+}
+
