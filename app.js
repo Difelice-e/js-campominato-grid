@@ -3,7 +3,7 @@ let gameMode;
 let numberGrid;
 
 const getGameMode = function () {
-    let gameMode = document.getElementById("difficulty").value;
+    gameMode = document.getElementById("difficulty").value;
     
     if (gameMode == "easy") {
         numberGrid = 101;
@@ -14,6 +14,7 @@ const getGameMode = function () {
     }
 
     return numberGrid;
+    // console.log(numberGrid);
 }
 
 const getGrid = function (numberGrid) {
@@ -28,4 +29,4 @@ const getGrid = function (numberGrid) {
 
 
 
-document.getElementById("play").addEventListener("click", getGameMode, getGrid);
+document.getElementById("play").addEventListener("click", getGameMode, getGrid(numberGrid));
