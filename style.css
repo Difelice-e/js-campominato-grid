@@ -19,6 +19,7 @@ body {
 header .row {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
@@ -49,4 +50,9 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.selected {
+    background-color: rgb(50, 99, 222);
+    color: white;
 }
